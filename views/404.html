@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>404 Page Not Found</title>
+
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <!-- custom stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- header starts from here -->
+  <header id="header">
+    <nav class="navbar navbar-light bg-light  navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand font-weight-bold" href="/">Let's Travel</a>
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapse"
+          aria-expanded="false" aria-label="Toggle Navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="/contact" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="/admin" class="nav-link">Admin</a></li>
+          </ul>
+
+          <div class="navbar-nav ml-auto">
+            <form class="call-me-form form-inline">
+              <div class="input-group">
+                <input type="text" id="phone-number" class="form-control" placeholder="Phone Number" required>
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="submit">Call Me</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div> <!-- container div ends here -->
+    </nav> <!-- navbar ends here -->
+
+  </header>
+  <!-- header ends here -->
+
+  <main>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="error-title">404</h1>
+          <p class="text-muted error-p">Sorry! The page you're looking for doesn't exist.</p>
+          <a class="btn btn-outline-secondary" href="/home">Go Back</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="bg-light error-footer fixed-bottom p-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="text-muted d-inline">2020, All Right Reserved, Let's Travel</p>
+        </div> <!-- col ends here -->
+
+        <div class="social-three col-lg-3 ml-auto d-flex">
+          <a href="#" class="btn "><i class="fab fa-facebook mr-2 fa-2x"></i></a>
+          <a href="#" class="btn "><i class="fab fa-twitter mr-2 fa-2x"></i></a>
+          <a href="#" class="btn "><i class="fab fa-instagram mr-2 fa-2x"></i></a>
+        </div>
+
+        <button class="btn btn-outline-secondary contact-btn float-right" data-toggle="modal"
+          data-target="#quoteModal">Get a Quote</button>
+
+      </div> <!-- row ends here -->
+    </div> <!-- container ends here -->
+
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" tabindex="-1" role="dialog" id="quoteModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <h5 class="modal-title">Contact Us</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-success alert-dismissible d-none quote-form-alert fade show" role="alert">
+            <p>Dear <span class="client-name font-weight-bold"></span> Thank You for reaching out to Us! We will contact
+              You as soon as possible!</p>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form class="needs-validation email-request-form">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" class="form-control" id="name" placeholder="Name" required>
+
+
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
+
+
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="text" class="form-control" id="phone" placeholder="Phone" required>
+
+
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <input type="submit" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- jquery cdn -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/posts.js"></script>
+  <script src="../assets/js/emails.js"></script>
+  <!-- bootstrap js -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+
+</html>

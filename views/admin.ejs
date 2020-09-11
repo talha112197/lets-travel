@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Let's Travel Admin Page</title>
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- header starts from here -->
+    <header id="header">
+        <nav class="navbar navbar-light bg-light  navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand font-weight-bold" href="/">Let's Travel</a>
+
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapse"
+                    aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="/home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="/contact" class="nav-link">Contact Us</a></li>
+                        <li class="nav-item active"><a href="/admin" class="nav-link">Admin</a></li>
+                    </ul>
+
+                    <ul class="navbar-nav ml-auto">
+                        <button type="button" class="btn btn-outline-danger logout-btn">Logout</button>
+                    </ul>
+
+                </div>
+
+            </div> <!-- container div ends here -->
+        </nav> <!-- navbar ends here -->
+
+    </header>
+    <!-- header ends here -->
+
+    <main>
+        <!-- showcase starts from here -->
+        <section id="showcase-admin" class="mt-5 mb-5">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card shadow-lg bg-light admin-dashboard-card">
+                            <div class="card-header admin-card-header">
+                                <h4 class="display-4 text-center">Dashboard</h4>
+                                <hr>
+                            </div> <!-- card header ends here -->
+
+                            <div class="card-body">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 mb-3">
+                                        <div class="card">
+                                            <div class="nav p-3 flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                                aria-orientation="vertical">
+
+                                                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                                                    href="#v-pills-article" role="tab" aria-controls="v-pills-article"
+                                                    aria-selected="true">Articles</a>
+
+                                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
+                                                    href="#v-pills-mails" role="tab" aria-controls="v-pills-mails"
+                                                    aria-selected="false">Mails</a>
+
+                                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
+                                                    href="#v-pills-callback" role="tab" aria-controls="v-pills-callback"
+                                                    aria-selected="false">Callback Requests <span
+                                                        class="badge  badge-light"></span></a>
+
+                                            </div>
+                                        </div>
+
+                                    </div> <!-- col-lg-3 ends here -->
+
+                                    <div class="col-lg-9 col-md-8 col-sm-12 col-12 pl-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+
+
+                                                <div class="tab-content" id="v-pills-tabContent">
+
+                                                    <div class="tab-pane fade show active" id="v-pills-article"
+                                                        role="tabpanel" aria-labelledby="v-pills-article">
+                                                        <button class="btn btn-primary" type="button"
+                                                            id="add-post-btn">Add Post</button>
+
+                                                        <table class="table table-responsive table-striped mt-3">
+                                                            <thead class="bg-light">
+                                                                <tr>
+                                                                    <th scope="col">I.D</th>
+                                                                    <th scope="col">Name</th>
+                                                                    <th scope="col">Location</th>
+                                                                    <th scope="col">Date</th>
+                                                                    <th scope="col" class="mr-5">Edit / Delete</th>
+                                                                    <th class="mr-5"></th>
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody class="table-body">
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <div class="tab-pane fade" id="v-pills-mails" role="tabpanel"
+                                                        aria-labelledby="v-pills-mails">
+                                                        <div class="emails-div">
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="tab-pane fade" id="v-pills-callback" role="tabpanel"
+                                                        aria-labelledby="v-pills-callback">
+
+
+                                                        <table class="table table-striped ">
+                                                            <thead class="bg-light">
+                                                                <tr>
+                                                                    <th scope="col">I.D</th>
+                                                                    <th scope="col">Number</th>
+                                                                    <th scope="col">Date</th>
+                                                                    <th scope="col" class="mr-5">Status</th>
+
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody class="callback-table-body">
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <!-- create post -->
+                                                    <div class="tab-pane fade" id="v-pills-createpost" role="tabpanel"
+                                                        aria-labelledby="v-pills-createpost">
+                                                        <h4>Create Post</h4>
+
+                                                        <form class="create-post-form">
+                                                            <div class="form-group mt-3">
+                                                                <label for="name" class="form-group-label">Title</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Name of the place..." id="name">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="country"
+                                                                    class="form-group-label">Country</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Location of the place..."
+                                                                    name="country" id="country">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="imageURL"
+                                                                    class="form-group-label">Image</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="URL of the place..." name="imageURL"
+                                                                    id="imageURL">
+                                                            </div>
+
+                                                            <p class="text-muted">OR</p>
+
+                                                            <div class="custom-file">
+                                                                <input type="file" class="custom-file-input"
+                                                                    id="CustomFile">
+                                                                <label class="custom-file-label" for="CustomFile">Choose
+                                                                    file...</label>
+
+                                                            </div>
+
+                                                            <div class="form-group mt-3">
+                                                                <label for="description">Description</label>
+
+                                                                <textarea class="form-control" id="description"
+                                                                    rows="10"></textarea>
+                                                            </div>
+
+                                                            <button type="submit"
+                                                                class="btn btn-primary  add-post-content-btn">Add
+                                                                Post</button>
+                                                        </form>
+                                                    </div> <!-- create post pill tab ends here -->
+
+                                                    <!-- update post pane -->
+                                                    <div class="tab-pane fade" id="v-pills-updatepost" role="tabpanel"
+                                                        aria-labelledby="v-pills-updatepost">
+                                                        <h4>Update Post</h4>
+
+                                                        <form class="update-post-form">
+                                                            <div class="form-group mt-3">
+                                                                <label for="update-name"
+                                                                    class="form-group-label">Title</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Name of the place..."
+                                                                    name="update-name" id="update-name">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label for="update-country"
+                                                                    class="form-group-label">Country</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Location of the place..."
+                                                                    name="update-country" id="update-country">
+                                                            </div>
+
+                                                            <div class="form-group mt-3">
+                                                                <label for="update-description">Description</label>
+
+                                                                <textarea class="form-control" id="update-description"
+                                                                    rows="10"></textarea>
+                                                            </div>
+
+                                                            <button type="submit"
+                                                                class="btn btn-primary  update-post-content-btn">Update
+                                                                Post</button>
+                                                        </form>
+                                                    </div> <!-- pills ends here -->
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- card ends here -->
+                                </div> <!-- col lg 9 ends here -->
+                            </div> <!-- row ends here -->
+                        </div> <!-- card-body ends here -->
+                    </div> <!-- card ends here -->
+
+                </div> <!-- row div ends here -->
+
+            </div> <!-- container ends here -->
+        </section>
+        <!-- showcase ends here -->
+
+    </main>
+
+    <footer class="bg-light text-center p-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="text-muted d-inline">2020, All Right Reserved, Let's Travel</p>
+
+                </div> <!-- col ends here -->
+            </div> <!-- row ends here -->
+        </div> <!-- container ends here -->
+
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" role="dialog" id="quoteModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="clientname">Your name</label>
+                            <input type="text" class="form-control" id="clientname" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <input type="text" class="form-control" id="phone" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <input class="btn btn-primary">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- posts script -->
+    <script src="../assets/js/posts.js"></script>
+
+    <!-- script -->
+    <script src="../assets/admin/js/main.js"></script>
+
+    <script src="../assets/admin/js/createpost.js"></script>
+
+    <script src="../assets/admin/js/deletepost.js"></script>
+
+    <!-- update post script -->
+    <script src="../assets/admin/js/updatepost.js"></script>
+
+    <!-- callback script -->
+    <script src="../assets/admin/js/callback-requests.js"></script>
+
+    <!-- delete callback script -->
+    <script src="../assets/admin/js/deletecallback.js"></script>
+
+    <!-- emails script -->
+    <script src="../assets/admin/js/createmails.js"></script>
+
+    <!-- delete mails script -->
+    <script src="../assets/admin/js/deletemails.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
